@@ -1,0 +1,247 @@
+$text-color: #131112;
+$bg-color: #F7F7FF;
+$bn-color: #C49991;
+$font-family: 'Playfair Display';
+$sec-color: #60656F;
+$contact-color: #D6BEBA;
+a {
+    color: $text-color;
+}
+
+.principal {
+    height: 100%;
+}
+
+.container {
+    margin-top: 200px;
+    margin-left: 110px;
+    margin-right: 110px;
+    color: $text-color;
+    font-family: $font-family, serif;
+    font-weight: 500;
+    line-height: 30px;
+    height: 100%;
+}
+
+.name_page {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name_page>.navbar>a {
+    margin: 30px;
+    color: $text-color;
+    font-size: 20px;
+    font-family: $font-family;
+}
+
+.name_page>span {
+    color: $text-color;
+    font-family: $font-family, serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+}
+
+.name {
+    text-align: center;
+    font-size: 25px;
+}
+
+.job_illust {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.job_illust>span {
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $sec-color;
+}
+
+.job_illust>span>img {
+    vertical-align: middle;
+}
+
+.linked_navbar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.linked_navbar>a {
+    margin: 30px;
+    color: $text-color;
+    font-size: 20px;
+}
+
+
+/* ABOUT */
+
+.presentation {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.abt_me {
+    padding-bottom: 60px;
+    padding-right: 40px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#code {
+    padding-top: 20px;
+}
+
+.abt_me_2 {
+    text-align: justify;
+    padding-top: 110px;
+    padding-bottom: 60px;
+    font-size: 25px;
+    width: 100%;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skills span {
+    font-size: 25px;
+}
+
+.skills .mat-chip {
+    background-color: $bn-color;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    >a {
+        text-transform: uppercase;
+        color: $text-color;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+
+/* PROJECTS */
+
+.projects {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project .card {
+    width: 20rem;
+    height: 200px;
+    background-color: white;
+}
+
+.card-body {
+    color: $bn-color;
+}
+
+.card-title {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 200px;
+    font-size: 20px;
+    font-family: $font-family;
+    font-weight: 700;
+}
+
+.edlc,
+.prestapp,
+.cdc,
+.prest {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* CONTACT */
+
+.contact {
+    display: flex;
+    justify-content: center;
+    h5 {
+        font-family: $font-family;
+        font-size: 20px;
+        line-height: 350px;
+        padding-right: 60px;
+    }
+    >.card {
+        box-shadow: 5px 5px 0px 0px $text-color;
+        width: 500px;
+        height: 350px;
+        background-color: $contact-color;
+        >.card-body {
+            color: $text-color;
+            >form {
+                display: flex;
+                flex-direction: column;
+                >mat-form-field {
+                    padding: 10px;
+                    display: flex;
+                    justify-content: space-around;
+                    font-weight: 500;
+                    font-size: 20px;
+                    #message {
+                        height: 100px;
+                    }
+                }
+            }
+        }
+        .send {
+            text-align: center;
+            >button {
+                cursor: pointer;
+                background-color: transparent;
+                font-family: $font-family;
+                margin: 35px 8px 8px 0;
+                border-color: $text-color;
+            }
+        }
+    }
+}
+
+footer {
+    flex-direction: column;
+    font-family: $font-family;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}

@@ -1,0 +1,181 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <span>{{author}}</span>
+  <span>Portfolio 20</span>
+  <a aria-label="Linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/in/salma-oussous/"
+    title="Linkedin">Linkedin
+  </a>
+
+</div>
+
+<div class="content" role="main">
+
+  <!-- Small presentation -->
+  <div class="container abt_me">
+    <!-- <img class="card-img-top thumbnail" src="../assets/img/thumbnail.jpg" width="100%" alt="Card image cap"> -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">More about me </h1>
+        <p class="lead">Salma Oussous<br />22 <br />Full-stack developer </p>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <!-- Languages -->
+  <!--     <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">What I can do</h1>
+        <div class="container">
+          <div class="row row_lang">
+            <div class="col">
+              <h3>PHP</h3>
+            </div>
+            <div class="col">
+              <h3>ReactJs</h3>
+            </div>
+            <div class="col">
+              <h3>Angular</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+  <!-- List of projects -->
+  <div class="container c_projects">
+    <h2>Projects</h2>
+    <p>Here is a list of projects I worked on</p>
+
+    <input type="hidden" #selection>
+
+    <div class="card-container">
+      <div class="card card-small" (click)="selection.value = 'edlc'" tabindex="0">
+        <span>Les éleveurs de la charentonne</span>
+      </div>
+
+      <div class="card card-small" (click)="selection.value = 'CDC'" tabindex="0">
+        <span>Coup de Coeur Immo</span>
+      </div>
+
+      <div class="card card-small" (click)="selection.value = 'PrestApp'" tabindex="0">
+        <span>PrestApp BO</span>
+      </div>
+
+      <div class="card card-small" (click)="selection.value = 'Zimmer'" tabindex="0">
+        <span>Zimmer</span>
+      </div>
+
+      <div class="card card-small" (click)="selection.value = 'Pa'" tabindex="0">
+        <span>PrestApp</span>
+      </div>
+    </div>
+
+    <!-- Terminal -->
+    <div class="card-container" [ngSwitch]="selection.value">
+
+      <div class="card" style="width: 20rem; height: 100%" *ngSwitchDefault>
+        <img class="card-img-top" src="../assets/img/edlc.PNG" width="100%" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Full-stack developer</h5>
+          <ul>
+            <li>
+              Mockup Integration
+            </li>
+            <li>
+              Module development
+            </li>
+          </ul>
+          <a href="laboutiquedeseleveurs.fr" class="btn btn-primary" target="_blank">View website</a>
+        </div>
+        <mat-chip-list aria-label="Fish selection">
+          <mat-chip>PHP</mat-chip>
+          <mat-chip>Symfony</mat-chip>
+          <mat-chip>PrestaShop</mat-chip>
+        </mat-chip-list>
+      </div>
+
+      <div class="card" style="width: 20rem; height: 100%" *ngSwitchCase="'CDC'">
+        <img class="card-img-top" src="../assets/img/cdc.PNG" width="100%" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Full-stack developer</h5>
+          <ul>
+            <li>
+              Front integration
+            </li>
+            <li>
+              Development of buyers tunnel steps
+            </li>
+          </ul>
+          <a href="coupdecoeur.immo" class="btn btn-primary" target="_blank">View website</a>
+        </div>
+        <mat-chip-list aria-label="Fish selection">
+          <mat-chip>ReactJs</mat-chip>
+          <mat-chip>PHP</mat-chip>
+          <mat-chip>Laravel</mat-chip>
+        </mat-chip-list>
+      </div>
+
+      <div class="card" style="width: 20rem; height: 100%" *ngSwitchCase="'PrestApp'">
+        <img class="card-img-top" src="../assets/img/prestapp.png" width="100%" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Full-stack developer</h5>
+          <ul>
+            <li>
+              Optimizing the front of the PrestApp BackOffice
+            </li>
+            <li>
+              Using SendInBlue Api to make transactional emails depending on the situation
+            </li>
+          </ul>
+          <a href="https://webapp.prestapp.eu/" class="btn btn-primary" target="_blank">View website</a>
+        </div>
+        <mat-chip-list aria-label="Fish selection">
+          <mat-chip>Angular</mat-chip>
+          <mat-chip>ReactJs</mat-chip>
+        </mat-chip-list>
+      </div>
+
+      <div class="card" style="width: 20rem; height: 100%" *ngSwitchCase="'Pa'">
+        <img class="card-img-top" src="../assets/img/pa.PNG" width="100%" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Full-stack developer</h5>
+          <ul>
+            <li>
+              Front integration
+            </li>
+            <li>
+              Laravel API to communicate with wordpress and get Posts
+              Laravel API to send sms with SMSPartner
+              Laravel API to send mails with SendInBlue
+            </li>
+          </ul>
+          <a href="https://www.prestapp.eu/" class="btn btn-primary" target="_blank">View website</a>
+        </div>
+        <mat-chip-list aria-label="Fish selection">
+          <mat-chip>PHP</mat-chip>
+          <mat-chip>Laravel</mat-chip>
+          <mat-chip>ReactJs</mat-chip>
+        </mat-chip-list>
+      </div>
+
+      <div class="card" style="width: 20rem; height: 100%" *ngSwitchCase="'Zimmer'">
+        <img class="card-img-top" src="../assets/img/zimmer.PNG" width="100%" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Increase the audit performance and the SEO by adding lazy loading</h5>
+          <a href="https://www.zimmersa.com/" class="btn btn-primary" target="_blank">View website</a>
+        </div>
+        <mat-chip-list aria-label="Fish selection">
+          <mat-chip>PHP</mat-chip>
+          <mat-chip>Symfony</mat-chip>
+          <mat-chip>PrestaShop</mat-chip>
+        </mat-chip-list>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<router-outlet></router-outlet>
