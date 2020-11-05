@@ -204,7 +204,6 @@ a {
     >.card {
         box-shadow: 5px 5px 0px 0px $text-color;
         width: 500px;
-        height: 350px;
         background-color: $contact-color;
         >.card-body {
             color: $text-color;
@@ -212,11 +211,11 @@ a {
                 display: flex;
                 flex-direction: column;
                 >mat-form-field {
-                    padding: 10px;
                     display: flex;
                     justify-content: space-around;
                     font-weight: 500;
                     font-size: 20px;
+                    font-family: $font-family;
                     #message {
                         height: 100px;
                     }
@@ -229,7 +228,7 @@ a {
                 cursor: pointer;
                 background-color: transparent;
                 font-family: $font-family;
-                margin: 35px 8px 8px 0;
+                margin-bottom: 20px;
                 border-color: $text-color;
             }
         }
@@ -244,4 +243,82 @@ footer {
     justify-content: center;
     text-align: center;
     align-items: center;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 765px) {
+    .container {
+        margin-left: unset;
+        margin-right: unset;
+        margin-top: 50px;
+        padding-bottom: 50px;
+    }
+    .home,
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .presentation {
+        display: unset;
+        justify-content: unset;
+        flex-direction: unset;
+    }
+    .abt_me,
+    .abt_me_2 {
+        padding-top: unset;
+        padding-bottom: unset;
+        font-size: 16px;
+        text-align: center;
+    }
+    #code {
+        padding-top: unset;
+        margin: 0 auto;
+    }
+    .skills>span {
+        font-size: 20px;
+        ;
+    }
+    .projects {
+        flex-direction: column;
+    }
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact>h5 {
+        line-height: unset;
+        padding-bottom: unset;
+    }
+    .name_page>.navbar {
+        display: none;
+    }
+    .linked_navbar {
+        flex-direction: row;
+        a {
+            margin: 15px;
+        }
+    }
+    .contact>.card {
+        width: 100%;
+    }
+    .project {
+        br {
+            display: none
+        }
+    }
+    #contact {
+        margin-top: 100px;
+    }
+    .project {
+        .card {
+            font-size: 12px;
+        }
+    }
+    .principal {
+        height: unset;
+    }
 }
