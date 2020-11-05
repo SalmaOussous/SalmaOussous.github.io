@@ -14,8 +14,8 @@ a {
 
 .container {
     margin-top: 200px;
-    margin-left: 110px;
-    margin-right: 110px;
+    margin-left: 155px;
+    margin-right: 155px;
     color: $text-color;
     font-family: $font-family, serif;
     font-weight: 500;
@@ -66,6 +66,7 @@ a {
 .job_illust {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     text-align: center;
     vertical-align: middle;
 }
@@ -77,8 +78,9 @@ a {
     color: $sec-color;
 }
 
-.job_illust>span>img {
+.job_illust>img {
     vertical-align: middle;
+    padding-top: 40px;
 }
 
 .linked_navbar {
@@ -250,8 +252,8 @@ footer {
 
 @media (max-width: 765px) {
     .container {
-        margin-left: unset;
-        margin-right: unset;
+        margin-left: 10px;
+        margin-right: 10px;
         margin-top: 50px;
         padding-bottom: 50px;
     }
