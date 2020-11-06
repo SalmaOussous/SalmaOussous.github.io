@@ -93,6 +93,7 @@ a {
     margin: 30px;
     color: $text-color;
     font-size: 20px;
+    text-decoration: underline;
 }
 
 
@@ -155,7 +156,7 @@ a {
 
 .projects {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .project {
@@ -318,6 +319,9 @@ footer {
     .project {
         .card {
             font-size: 12px;
+            .card-title {
+                font-size: 14px;
+            }
         }
     }
     .principal {
