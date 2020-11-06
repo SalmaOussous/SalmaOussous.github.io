@@ -59,7 +59,7 @@
                     <img src="../assets/img/portfolio/code.svg" width=180px id="code">
                 </div>
                 <div class="abt_me_2">
-                    <p>While I was studying in College, I worked partially in a Start-up called<a href="https://www.aquilapp.fr/" target="_blank" style="text-decoration: none;"> Aquil'App</a> as a full-stack developer intern. I earned so much experience
+                    <p>While I was studying in College, I worked partially (intern) in a Start-up called<a href="https://www.aquilapp.fr/" target="_blank" style="text-decoration: none;"> Aquil'App</a> as a full-stack developer. I earned so much experience
                         as I fell in love with the Dev world. Now I'm making it my full time job
                     </p>
                 </div>
@@ -99,102 +99,158 @@
     <div class="container projects_container">
         <div class="row projects">
             <div class="col-md-6 project">
+                <input type="hidden" #selection>
                 <div class="edlc">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body" (click)="selection.value = 'edlc'">
                             <h5 class="card-title">La boutique des éleveurs</h5>
                         </div>
                     </div>
-                    <hr>
+                </div>
+                <div class="cdc">
                     <div class="card">
-                        <div class="card-body">
-                            <ul>
-                                <li>
-                                    Mockup Integration
-                                </li>
-                                <li>
-                                    Module development
-                                </li>
-                            </ul>
+                        <div class="card-body" (click)="selection.value = 'CDC'">
+                            <h5 class="card-title">Coup de Coeur Immo</h5>
                         </div>
                     </div>
                 </div>
-                <br>
                 <div class="prestapp">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body" (click)="selection.value = 'PrestApp'">
                             <h5 class="card-title">PrestApp</h5>
                         </div>
                     </div>
-                    <hr>
+                </div>
+                <div class="zimmer">
                     <div class="card">
-                        <div class="card-body">
-                            <ul>
-                                <li>
-                                    Front integration
-                                </li>
-                                <li>
-                                    Laravel API to communicate with wordpress and get Posts
-                                </li>
-                                <li>
-                                    Laravel API to send sms with SMSPartner
-                                </li>
-                                <li>
-                                    Laravel API to send mails with SendInBlue
-                                </li>
-                            </ul>
+                        <div class="card-body" (click)="selection.value = 'Zimmer'">
+                            <h5 class="card-title">Zimmer</h5>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 project">
-                <div class="cdc">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Coup De Coeur Immo</h5>
-                        </div>
-
-                    </div>
-                    <hr>
-                    <div class="card">
-                        <div class="card-body">
-                            <ul>
-                                <li>
-                                    Front integration
-                                </li>
-                                <li>
-                                    Development of buyers tunnel steps
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <br>
                 <div class="prest">
                     <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">PrestApp WebApp</h5>
+                        <div class="card-body" (click)="selection.value = 'Pa'">
+                            <h5 class="card-title">Prestapp WebApp</h5>
                         </div>
                     </div>
-                    <hr>
-                    <div class="card">
-                        <div class="card-body">
-                            <ul>
-                                <li>
-                                    Optimizing the front of the PrestApp BackOffice
-                                </li>
-                                <li>
-                                    Using SendInBlue Api to make transactional emails depending on the situation
-                                </li>
-                            </ul>
-                        </div>
+                </div>
+
+            </div>
+            <div class="col-md-6 project" [ngSwitch]="selection.value">
+                <div class="card work_done" *ngSwitchDefault>
+                    <div class="card-body">
+                        <img src="../assets/img/edlc.PNG" width="100%">
+                        <a href="http://laboutiquedeseleveurs.fr/" target="_blank">Visit the website</a>
+                        <ul>
+                            <li>
+                                Mockup Integration
+                            </li>
+                            <li>
+                                Module development
+                            </li>
+                        </ul>
+                        <mat-chip-list aria-label="Fish selection">
+                            <mat-chip>PHP</mat-chip>
+                            <mat-chip>Sass</mat-chip>
+                            <mat-chip>PrestaShop</mat-chip>
+                            <mat-chip>MySQL</mat-chip>
+                        </mat-chip-list>
+                    </div>
+                </div>
+                <div class="card work_done" *ngSwitchCase="'PrestApp'">
+                    <div class="card-body">
+                        <img src="../assets/img/prestapp.png" width="100%">
+                        <a href="https://www.prestapp.eu/" target="_blank">Visit the website</a>
+                        <ul>
+                            <li>
+                                Front integration
+                            </li>
+                            <li>
+                                Laravel API to communicate with wordpress and get Posts
+                            </li>
+                            <li>
+                                Laravel API to send sms with SMSPartner
+                            </li>
+                            <li>
+                                Laravel API to send mails with SendInBlue
+                            </li>
+                        </ul>
+                        <mat-chip-list aria-label="Fish selection">
+                            <mat-chip>ReactJs</mat-chip>
+                            <mat-chip>PHP</mat-chip>
+                            <mat-chip>Laravel</mat-chip>
+                        </mat-chip-list>
+                    </div>
+                </div>
+                <div class="card work_done" *ngSwitchCase="'CDC'">
+                    <div class="card-body">
+                        <img src="../assets/img/cdc.PNG" width="100%">
+                        <a href="http://coupdecoeur.immo/" target="_blank">Visit the website</a>
+                        <ul>
+                            <li>
+                                Front integration
+                            </li>
+                            <li>
+                                Development of buyers and sellers tunnel steps
+                            </li>
+                            <li>
+                                Front integration of the back office
+                            </li>
+                        </ul>
+                        <mat-chip-list aria-label="Fish selection">
+                            <mat-chip>PHP</mat-chip>
+                            <mat-chip>Laravel</mat-chip>
+                            <mat-chip>ReactJs</mat-chip>
+                            <mat-chip>MySQL</mat-chip>
+                        </mat-chip-list>
+                    </div>
+                </div>
+                <div class="card work_done" *ngSwitchCase="'Pa'">
+                    <div class="card-body">
+                        <img src="../assets/img/pa.PNG" width="100%">
+                        <a href="https://webapp.prestapp.eu/" target="_blank">Visit the website</a>
+                        <ul>
+                            <li>
+                                Optimizing the front of the PrestApp BackOffice
+                            </li>
+                            <li>
+                                Using SendInBlue Api to make transactional emails depending on the situation
+                            </li>
+                        </ul>
+                        <mat-chip-list aria-label="Fish selection">
+                            <mat-chip>ReactJs</mat-chip>
+                            <mat-chip>Angular</mat-chip>
+                            <mat-chip>MongoDB</mat-chip>
+                        </mat-chip-list>
+                    </div>
+                </div>
+                <div class="card work_done" *ngSwitchCase="'Zimmer'">
+                    <div class="card-body">
+                        <img src="../assets/img/zimmer.PNG" width="100%">
+                        <a href="zimmersa.com" target="_blank">Visit the website</a>
+                        <ul>
+                            <li>
+                                SEO Optimization with lazyloading
+                            </li>
+                            <li>
+                                Audit reporting
+                            </li>
+                        </ul>
+                        <mat-chip-list aria-label="Fish selection">
+                            <mat-chip>PHP</mat-chip>
+                            <mat-chip>PrestaShop</mat-chip>
+                        </mat-chip-list>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- PROJECTS -->
+
+
+
+<!-- CONTACT -->
 <div class="principal" id="contact">
     <div class="name_page">
         <span>Contact</span>

@@ -162,23 +162,36 @@ a {
 .project {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
 }
 
 .project .card {
     width: 20rem;
-    height: 200px;
+    height: 50px;
     background-color: white;
+}
+
+.project .work_done {
+    height: 100%;
+}
+
+.work_done>.card-body {
+    box-shadow: unset;
 }
 
 .card-body {
     color: $bn-color;
+    box-shadow: 5px 5px 8px 0px #ECEFF4;
+    a {
+        color: $bn-color;
+        text-align: center;
+    }
 }
 
 .card-title {
     text-align: center;
     vertical-align: middle;
-    line-height: 200px;
+    line-height: 50px;
     font-size: 20px;
     font-family: $font-family;
     font-weight: 700;
@@ -187,9 +200,19 @@ a {
 .edlc,
 .prestapp,
 .cdc,
-.prest {
+.prest,
+.zimmer {
+    padding: 10px;
     display: flex;
     justify-content: space-evenly;
+}
+
+.edlc:hover,
+.prestapp:hover,
+.cdc:hover,
+.prest:hover,
+.zimmer:hover {
+    cursor: pointer;
 }
 
 

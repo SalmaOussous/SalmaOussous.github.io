@@ -1,2 +1,2 @@
 To do 
-- Faire un modal pour les projets pour en parler plus 
+- Lorsqu'on appuie sur le titre du projet, un modal apparait avec une capture d'écran, le lien du site et plus de détail sur les langages
