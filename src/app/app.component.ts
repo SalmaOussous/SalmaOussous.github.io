@@ -25,14 +25,16 @@ export class AppComponent {
   }
 
   onSubmit(FormData) {
+    const p: HTMLParagraphElement = this.renderer.createElement('p');
     this.contact.PostMessage(FormData)
       .subscribe(response => {
-        const p: HTMLParagraphElement = this.renderer.createElement('p');
         p.innerHTML = "Email Sent"
         this.renderer.appendChild(this.confirmation.nativeElement, p)
         location.href = 'https://mailthis.to/confirm'
         console.log(response) 
       }, error => {
+        p.innerHTML = "Email not sent"
+        this.renderer.appendChild(this.confirmation.nativeElement, p)
         console.warn(error.responseText)
         console.log({ error })
       })
