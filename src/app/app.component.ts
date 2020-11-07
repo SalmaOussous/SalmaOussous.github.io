@@ -1,5 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, ElementRef, AfterViewInit, OnInit, ViewChild, Renderer2 } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators, NgForm } from '@angular/forms'
+import { $ } from 'protractor';
 import { ContactService } from './contact/contact.service';
 @Component({
   selector: 'app-test',
@@ -10,8 +11,9 @@ export class AppComponent {
   title = 'SoPortfolio';
   author = 'Salma Oussous';
   date = new Date();
+  @ViewChild('confirmation') confirmation: ElementRef;
   FormData: FormGroup;
-  constructor(private builder: FormBuilder, private contact: ContactService) { }
+  constructor(private builder: FormBuilder, private contact: ContactService, private renderer: Renderer2) { }
 
   ngOnInit() {
     this.FormData = this.builder.group({
@@ -22,13 +24,14 @@ export class AppComponent {
     });
   }
 
-
   onSubmit(FormData) {
-    console.log(FormData)
     this.contact.PostMessage(FormData)
       .subscribe(response => {
+        const p: HTMLParagraphElement = this.renderer.createElement('p');
+        p.innerHTML = "Email Sent"
+        this.renderer.appendChild(this.confirmation.nativeElement, p)
         location.href = 'https://mailthis.to/confirm'
-        console.log(response)
+        console.log(response) 
       }, error => {
         console.warn(error.responseText)
         console.log({ error })

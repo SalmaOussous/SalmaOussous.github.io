@@ -268,7 +268,7 @@
                     <h5>I see you want to get in touch !</h5>
                     <div class="card">
                         <div class="card-body">
-                            <form class="example-form" [formGroup]="FormData" ng-submit="onSubmit(FormData.value)">
+                            <form class="example-form" [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)">
                                 <mat-form-field class="example-full-width">
                                     <mat-label>Full Name</mat-label>
                                     <input matInput name="fullname" formControlName="fullname" #fullname maxlength="100">
@@ -286,7 +286,8 @@
                                     <input matInput name="message" #message formControlName="message" maxlength="256" id="message">
                                 </mat-form-field>
                                 <div class="send">
-                                    <button mat-raised-button type="submit" [disabled]="!FormData.valid">SEND</button>
+                                    <div #confirmation></div>
+                                    <button type="submit" mat-raised-button [disabled]="!FormData.valid">SEND</button>
                                 </div>
                             </form>
                         </div>
