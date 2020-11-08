@@ -1,16 +1,11 @@
 import { Component, ElementRef, AfterViewInit, OnInit, ViewChild, Renderer2 } from '@angular/core';
 
-
 @Component({
-  selector: 'app-test',
-  template: `
-  <router-outlet></router-outlet>
-  `,
-  styleUrls: ['./app.component.scss'],
+  selector: 'legal-mentions',
+  templateUrl: './legal-mentions.component.html',
+  styleUrls: ['../../app/app.component.scss']
 })
-export class AppComponent {
+export class LegalMentionsComponent {
   title = 'SoPortfolio';
   author = 'Salma Oussous';
-  date = new Date();
-
 }
