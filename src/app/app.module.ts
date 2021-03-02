@@ -9,7 +9,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
-import { ContactService } from './contact/contact.service';
+/* import { ContactService } from './contact/contact.service'; */
 import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
@@ -29,7 +29,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     SlickCarouselModule,
     HttpClientModule
   ],
-  providers: [ContactService],
+/*   providers: [ContactService], */
   bootstrap: [AppComponent]
 })
 
