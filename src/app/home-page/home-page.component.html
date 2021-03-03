@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">SO Portfolio</a>
   <ul class="navbar-nav">
     <li class="nav-item active">
@@ -8,29 +8,311 @@
       <a class="nav-link" href="#about">About</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Projects</a>
+      <a class="nav-link" href="#projects">Projects</a>
     </li>
-    <li class="nav-item">
+    <!--  <li class="nav-item">
       <a class="nav-link" href="#">Contact</a>
-    </li>
+    </li> -->
   </ul>
 </nav>
-<div class="container">
-  <div class="jumbotron jumbotron-fluid" id="home">
-    <div class="container home_container">
+<div class="container" id="home">
+  <div class="row home_container">
+    <div class="col-md-6" id="first_home_container">
+      <p class="lead">Hello <span class="material-icons"> pan_tool </span></p>
       <img src="../assets/img/portfolio/profile.svg" width="130px" />
-      <p class="lead">Full-stack developer</p>
-      <img src="../assets/img/portfolio/desk.svg" width="300px" />
     </div>
-  </div>
-
-  <div class="jumbotron jumbotron-fluid" id="about">
-    <div class="container">
-      <h1 class="display-4">I'm Salma Oussous</h1>
-      <p class="lead">
-        This is a modified jumbotron that occupies the entire horizontal space
-        of its parent.
-      </p>
+    <div class="col-md-6">
+      <div class="card text-white bg-dark mb-3 first_container_card">
+        <div class="card-header">Welcome to my portfolio !</div>
+        <div class="card-body">
+          Here you'll get an idea on <a href="#about">who I am</a>, what
+          <a href="#projects">I worked on, my skills </a> and what I do right
+          now.
+          <!-- You can also contact me in the form below ! -->
+        </div>
+        <!-- 
+        <img src="../assets/img/portfolio/desk.svg" width="300px" /> -->
+      </div>
     </div>
   </div>
 </div>
+<!--Waves Container-->
+<div class="wave-container">
+  <svg
+    class="waves"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28"
+    preserveAspectRatio="none"
+    shape-rendering="auto"
+  >
+    <defs>
+      <path
+        id="gentle-wave"
+        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+      />
+    </defs>
+    <g class="parallax">
+      <use xlink:href="#gentle-wave" x="48" y="0" fill="black" />
+      <!-- <use xlink:href="#gentle-wave" x="48" y="3" fill="#d9d9d9" />
+     
+      <use xlink:href="#gentle-wave" x="48" y="5" fill="#d9d9d9" />
+      <use xlink:href="#gentle-wave" x="48" y="7" fill="black" /> -->
+    </g>
+  </svg>
+</div>
+<!--Waves end-->
+
+<div class="container" id="about">
+  <div class="row about_container">
+    <div class="col-md-4">
+      <div class="card text-white bg-dark mb-3 first_container_card">
+        <div class="card-body">
+          I'm Salma Oussous, and I have a degree in IT. <br />I live actually in
+          france and I work as a Sofwtare engineer in Capgemini Nantes.
+        </div>
+      </div>
+      <img src="../assets/img/portfolio/desk.svg" width="300px" />
+    </div>
+    <div class="col-md-4">
+      <div class="card text-white bg-dark mb-3 first_container_card">
+        <div class="card-header"><span class="material-icons"> add </span></div>
+        <div class="card-body">
+          While I was studying in College, I worked partially (intern) in a
+          Start-up as a full-stack developer. <br />I earned so much experience
+          as I fell in love with the Dev world. Now I'm making it my full time
+          job !
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 skills">
+      <h2>My skills are :</h2>
+      <mat-chip-list aria-label="Fish selection">
+        <mat-chip>PHP</mat-chip>
+        <mat-chip>React</mat-chip>
+        <mat-chip>Angular</mat-chip>
+        <mat-chip>HTML</mat-chip>
+        <mat-chip>CSS (sass, scss)</mat-chip>
+        <mat-chip>Laravel</mat-chip>
+        <mat-chip>Symfony</mat-chip>
+        <mat-chip>PrestaShop</mat-chip>
+      </mat-chip-list>
+    </div>
+  </div>
+</div>
+<!--Waves Container-->
+<div class="wave-container">
+  <svg
+    class="waves"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28"
+    preserveAspectRatio="none"
+    shape-rendering="auto"
+  >
+    <defs>
+      <path
+        id="gentle-wave"
+        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+      />
+    </defs>
+    <g class="parallax">
+      <!-- 
+      <use xlink:href="#gentle-wave" x="48" y="0" fill="black" />
+      <use xlink:href="#gentle-wave" x="48" y="3" fill="#f7f7ff" /> -->
+      <use xlink:href="#gentle-wave" x="48" y="5" fill="#d9d9d9" />
+      <!--  <use xlink:href="#gentle-wave" x="48" y="7" fill="black" /> -->
+    </g>
+  </svg>
+</div>
+<!--Waves end-->
+<div class="container" id="projects">
+  <div class="row projects">
+    <div class="col-md-6 project">
+      <input type="hidden" #selection />
+      <div class="edlc">
+        <div class="card">
+          <div class="card-body" (click)="selection.value = 'edlc'">
+            <h5 class="card-title">La boutique des éleveurs</h5>
+          </div>
+        </div>
+      </div>
+      <div class="cdc">
+        <div class="card">
+          <div class="card-body" (click)="selection.value = 'CDC'">
+            <h5 class="card-title">Coup de Coeur Immo</h5>
+          </div>
+        </div>
+      </div>
+      <div class="prestapp">
+        <div class="card">
+          <div class="card-body" (click)="selection.value = 'PrestApp'">
+            <h5 class="card-title">PrestApp</h5>
+          </div>
+        </div>
+      </div>
+      <div class="zimmer">
+        <div class="card">
+          <div class="card-body" (click)="selection.value = 'Zimmer'">
+            <h5 class="card-title">Zimmer</h5>
+          </div>
+        </div>
+      </div>
+      <div class="prest">
+        <div class="card">
+          <div class="card-body" (click)="selection.value = 'Pa'">
+            <h5 class="card-title">Prestapp WebApp</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 project" [ngSwitch]="selection.value">
+      <div class="card work_done" *ngSwitchDefault>
+        <div class="card-body">
+          <img src="../assets/img/edlc.PNG" width="100%" />
+          <a href="http://laboutiquedeseleveurs.fr/" target="_blank"
+            >Visit the website</a
+          >
+          <ul>
+            <li>Mockup Integration</li>
+            <li>Module development</li>
+          </ul>
+          <mat-chip-list aria-label="Fish selection">
+            <mat-chip>PHP</mat-chip>
+            <mat-chip>Sass</mat-chip>
+            <mat-chip>PrestaShop</mat-chip>
+            <mat-chip>MySQL</mat-chip>
+          </mat-chip-list>
+        </div>
+      </div>
+      <div class="card work_done" *ngSwitchCase="'PrestApp'">
+        <div class="card-body">
+          <img src="../assets/img/pa.PNG" width="100%" />
+          <a href="https://www.prestapp.eu/" target="_blank"
+            >Visit the website</a
+          >
+          <ul>
+            <li>Front integration</li>
+            <li>Laravel API to communicate with wordpress and get Posts</li>
+            <li>Laravel API to send sms with SMSPartner</li>
+            <li>Laravel API to send mails with SendInBlue</li>
+          </ul>
+          <mat-chip-list aria-label="Fish selection">
+            <mat-chip>ReactJs</mat-chip>
+            <mat-chip>PHP</mat-chip>
+            <mat-chip>Laravel</mat-chip>
+          </mat-chip-list>
+        </div>
+      </div>
+      <div class="card work_done" *ngSwitchCase="'CDC'">
+        <div class="card-body">
+          <img src="../assets/img/cdc.PNG" width="100%" />
+          <a href="http://coupdecoeur.immo/" target="_blank"
+            >Visit the website</a
+          >
+          <ul>
+            <li>Front integration</li>
+            <li>Development of buyers and sellers tunnel steps</li>
+            <li>Front integration of the back office</li>
+          </ul>
+          <mat-chip-list aria-label="Fish selection">
+            <mat-chip>PHP</mat-chip>
+            <mat-chip>Laravel</mat-chip>
+            <mat-chip>ReactJs</mat-chip>
+            <mat-chip>MySQL</mat-chip>
+          </mat-chip-list>
+        </div>
+      </div>
+      <div class="card work_done" *ngSwitchCase="'Pa'">
+        <div class="card-body">
+          <img src="../assets/img/prestapp.png" width="100%" />
+          <a href="https://webapp.prestapp.eu/" target="_blank"
+            >Visit the website</a
+          >
+          <ul>
+            <li>Optimizing the front of the PrestApp BackOffice</li>
+            <li>
+              Using SendInBlue Api to make transactional emails depending on the
+              situation
+            </li>
+          </ul>
+          <mat-chip-list aria-label="Fish selection">
+            <mat-chip>ReactJs</mat-chip>
+            <mat-chip>Angular</mat-chip>
+            <mat-chip>MongoDB</mat-chip>
+          </mat-chip-list>
+        </div>
+      </div>
+      <div class="card work_done" *ngSwitchCase="'Zimmer'">
+        <div class="card-body">
+          <img src="../assets/img/zimmer.PNG" width="100%" />
+          <a href="zimmersa.com" target="_blank">Visit the website</a>
+          <ul>
+            <li>SEO Optimization with lazyloading</li>
+            <li>Audit reporting</li>
+          </ul>
+          <mat-chip-list aria-label="Fish selection">
+            <mat-chip>PHP</mat-chip>
+            <mat-chip>PrestaShop</mat-chip>
+          </mat-chip-list>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Waves Container-->
+<div class="wave-container">
+  <svg
+    class="waves"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28"
+    preserveAspectRatio="none"
+    shape-rendering="auto"
+  >
+    <defs>
+      <path
+        id="gentle-wave"
+        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+      />
+    </defs>
+    <g class="parallax">
+      <use xlink:href="#gentle-wave" x="48" y="0" fill="black" />
+      <use xlink:href="#gentle-wave" x="48" y="3" fill="#f7f7ff" />
+      <use xlink:href="#gentle-wave" x="48" y="5" fill="#d9d9d9" />
+      <use xlink:href="#gentle-wave" x="48" y="7" fill="black" />
+    </g>
+  </svg>
+</div>
+<!--Waves end-->
+
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+  <!-- Copyright -->
+  <img src="../assets/img/portfolio/more.svg" width="50px" />
+  <div class="footer-copyright text-center py-3">
+    <a> Salma Oussous ©</a> 2020
+    <p>
+      Personal design made with
+      <a href="https://www.canva.com/" target="_blank">Canva</a><br />Made with
+      🤍 using Angular
+    </p>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/salma-oussous/" target="_blank"
+        ><img
+          src="https://www.engie-nextflex.com/wp-content/uploads/2019/10/linkedin-noir-1-300x300.png"
+          width="20px"
+      /></a>
+      |
+      <a href="https://github.com/SalmaOussous" target="_blank"
+        ><img
+          src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+          width="20px"
+      /></a>
+    </div>
+    <a routerLink="legal-mentions" routerLinkActive="active">Legal notice</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->

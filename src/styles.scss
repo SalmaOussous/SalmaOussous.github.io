@@ -1,6 +1,7 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import "~@angular/material/theming";
+
 // Plus imports for other components in your app.
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -31,6 +32,9 @@ $font-family: "Roboto Mono";
 @include angular-material-theme($SoPortfolio-theme);
 
 /* You can add global styles to this file, and also import other style files */
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
 
 html,
 body {
@@ -41,6 +45,5 @@ body {
   /*  margin: 0; */
   font-family: $font-family, monospace !important;
   background-color: #eceff4;
-  /*   background-image: url("./assets/img/portfolio/Endless-Constellation.svg");
- */
+  background-image: url("./assets/img/portfolio/Endless-Constellation.svg");
 }

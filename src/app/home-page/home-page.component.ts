@@ -7,7 +7,7 @@ import { $ } from 'protractor';
 @Component({
   selector: 'home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['../../app/app.component.scss']
+  styleUrls: ['../app.component.scss']
 })
 export class HomePageComponent {
   title = 'SoPortfolio';
