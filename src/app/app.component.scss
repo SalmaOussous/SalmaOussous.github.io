@@ -1,5 +1,5 @@
-.home_container,
-.about_container {
+.home_row,
+.about_row {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -26,6 +26,26 @@
   }
 }
 
+/* #home {
+  padding-top: 25px;
+} */
+
+#about {
+  padding-top: 45px;
+}
+
+#projects {
+  padding-top: 128px;
+}
+
+#contact {
+  padding-top: 55px;
+}
+
+/* .container {
+  padding-top: 30px;
+}*/
+
 .card {
   display: flex;
   flex-direction: column;
@@ -35,11 +55,14 @@
 }
 .first_container_card {
   max-width: 15rem;
+  > img {
+    max-width: 10rem;
+  }
 }
 nav {
-  position: sticky;
+  /* position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 1; */
   > .navbar-nav {
     display: flex;
     justify-content: space-between;
@@ -104,7 +127,7 @@ a {
 
 /* PROJECTS */
 
-.projects {
+.projects_row {
   display: flex;
   justify-content: center;
 }

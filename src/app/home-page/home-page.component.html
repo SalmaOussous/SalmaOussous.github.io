@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">SO Portfolio</a>
   <ul class="navbar-nav">
     <li class="nav-item active">
@@ -10,20 +10,24 @@
     <li class="nav-item">
       <a class="nav-link" href="#projects">Projects</a>
     </li>
-    <!--  <li class="nav-item">
-      <a class="nav-link" href="#">Contact</a>
-    </li> -->
+    <li class="nav-item">
+      <a class="nav-link" href="#contact">Contact</a>
+    </li>
   </ul>
 </nav>
 <div class="container" id="home">
-  <div class="row home_container">
-    <div class="col-md-6" id="first_home_container">
-      <p class="lead">Hello <span class="material-icons"> pan_tool </span></p>
-      <img src="../assets/img/portfolio/profile.svg" width="130px" />
-    </div>
-    <div class="col-md-6">
+  <div class="row home_row">
+    <div class="col-md-12">
       <div class="card text-white bg-dark mb-3 first_container_card">
-        <div class="card-header">Welcome to my portfolio !</div>
+        <img
+          src="../assets/img/portfolio/profile.svg"
+          class="card-img-top"
+          alt="avatar"
+        />
+        <div class="card-header">
+          Welcome to my portfolio !
+          <span class="material-icons"> pan_tool </span>
+        </div>
         <div class="card-body">
           Here you'll get an idea on <a href="#about">who I am</a>, what
           <a href="#projects">I worked on, my skills </a> and what I do right
@@ -64,7 +68,7 @@
 <!--Waves end-->
 
 <div class="container" id="about">
-  <div class="row about_container">
+  <div class="row about_row">
     <div class="col-md-4">
       <div class="card text-white bg-dark mb-3">
         <div class="card-body">
@@ -83,8 +87,6 @@
           fell in love with the Dev world. Now I'm making it my full time job !
         </div>
       </div>
-    </div>
-    <div class="col-md-6 skills">
       <h2>My skills are :</h2>
       <mat-chip-list aria-label="Fish selection">
         <mat-chip>PHP</mat-chip>
@@ -100,6 +102,22 @@
         <mat-chip>GIT</mat-chip>
       </mat-chip-list>
     </div>
+    <!-- <div class="col-md-6 skills">
+      <h2>My skills are :</h2>
+      <mat-chip-list aria-label="Fish selection">
+        <mat-chip>PHP</mat-chip>
+        <mat-chip>React</mat-chip>
+        <mat-chip>Angular</mat-chip>
+        <mat-chip>HTML</mat-chip>
+        <mat-chip>CSS (sass, scss)</mat-chip>
+        <mat-chip>JS</mat-chip>
+        <mat-chip>Laravel</mat-chip>
+        <mat-chip>Symfony</mat-chip>
+        <mat-chip>PrestaShop</mat-chip>
+        <mat-chip>Docker</mat-chip>
+        <mat-chip>GIT</mat-chip>
+      </mat-chip-list>
+    </div> -->
   </div>
 </div>
 <!--Waves Container-->
@@ -129,7 +147,7 @@
 </div>
 <!--Waves end-->
 <div class="container" id="projects">
-  <div class="row projects">
+  <div class="row projects_row">
     <div class="col-md-6 project">
       <input type="hidden" #selection />
       <div class="edlc">
@@ -280,15 +298,112 @@
       />
     </defs>
     <g class="parallax">
+      <!-- 
       <use xlink:href="#gentle-wave" x="48" y="0" fill="black" />
       <use xlink:href="#gentle-wave" x="48" y="3" fill="#f7f7ff" />
-      <use xlink:href="#gentle-wave" x="48" y="5" fill="#d9d9d9" />
+      <use xlink:href="#gentle-wave" x="48" y="5" fill="#d9d9d9" /> -->
       <use xlink:href="#gentle-wave" x="48" y="7" fill="black" />
     </g>
   </svg>
 </div>
 <!--Waves end-->
+<div class="container" id="contact">
+  <div class="row contact_row">
+    <div class="col-md-12 contact">
+      <div class="contact">
+        <h5>I see you want to get in touch !</h5>
+        <div class="card">
+          <div class="card-body">
+            test
+            <form
+              class="example-form"
+              [formGroup]="FormData"
+              (ngSubmit)="onSubmit(FormData.value)"
+            >
+              <mat-form-field class="example-full-width">
+                <mat-label>Full Name</mat-label>
+                <input
+                  matInput
+                  name="fullname"
+                  formControlName="fullname"
+                  #fullname
+                  maxlength="100"
+                />
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input
+                  matInput
+                  name="email"
+                  formControlName="email"
+                  #email
+                  maxlength="256"
+                />
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Phone</mat-label>
+                <input
+                  type="tel"
+                  name="phone"
+                  formControlName="phone"
+                  matInput
+                />
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Message</mat-label>
+                <input
+                  matInput
+                  name="message"
+                  #message
+                  formControlName="message"
+                  maxlength="256"
+                  id="message"
+                />
+              </mat-form-field>
+              <div class="send">
+                <div #confirmation></div>
+                <button
+                  type="submit"
+                  mat-raised-button
+                  [disabled]="!FormData.valid"
+                >
+                  SEND
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class="wave-container">
+  <svg
+    class="waves"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28"
+    preserveAspectRatio="none"
+    shape-rendering="auto"
+  >
+    <defs>
+      <path
+        id="gentle-wave"
+        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+      />
+    </defs>
+    <g class="parallax">
+      <!-- 
+      <use xlink:href="#gentle-wave" x="48" y="0" fill="black" />
+      <use xlink:href="#gentle-wave" x="48" y="3" fill="#f7f7ff" /> -->
+      <use xlink:href="#gentle-wave" x="48" y="5" fill="#d9d9d9" />
+      <!--
+      <use xlink:href="#gentle-wave" x="48" y="7" fill="black" />
+      -->
+    </g>
+  </svg>
+</div>
 <!-- Footer -->
 <footer class="page-footer font-small blue">
   <!-- Copyright -->
