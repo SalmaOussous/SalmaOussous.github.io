@@ -2,8 +2,8 @@ import { Component, ElementRef, AfterViewInit, OnInit, ViewChild, Renderer2 } fr
 import { FormGroup, FormBuilder, FormControl, Validators, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { $ } from 'protractor';
-/* import { ContactService } from '../contact/contact.service';
- */
+import { ContactService } from '../contact/contact.service';
+
 @Component({
   selector: 'home-page',
   templateUrl: './home-page.component.html',
@@ -13,7 +13,7 @@ export class HomePageComponent {
   title = 'SoPortfolio';
   author = 'Salma Oussous';
   date = new Date();
- /*  @ViewChild('confirmation') confirmation: ElementRef;
+  @ViewChild('confirmation') confirmation: ElementRef;
   FormData: FormGroup;
   constructor(private builder: FormBuilder, private contact: ContactService, private renderer: Renderer2, private router: Router) { }
 
@@ -40,7 +40,7 @@ export class HomePageComponent {
         console.warn(error.responseText)
         console.log({ error })
       })
-  } */
+  }
 }
 
 

@@ -196,6 +196,7 @@ $bn-color: #c49991;
   display: flex;
   justify-content: center;
   h5 {
+    font-family: "Roboto Mono", monospace;
     font-size: 20px;
     line-height: 350px;
     padding-right: 60px;
@@ -213,6 +214,7 @@ $bn-color: #c49991;
           justify-content: space-around;
           font-weight: 500;
           font-size: 20px;
+
           #message {
             height: 100px;
           }
@@ -230,6 +232,10 @@ $bn-color: #c49991;
   }
 }
 
+.mat-input-element,
+mat-label {
+  font-family: "Roboto Mono", monospace;
+}
 footer {
   flex-direction: column;
   width: 100%;
