@@ -25,12 +25,16 @@
     margin-top: 25px;
   }
 }
-.first_container_card {
+
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.first_container_card {
+  max-width: 15rem;
 }
 nav {
   position: sticky;
@@ -133,7 +137,6 @@ $bn-color: #c49991;
   margin: 30px auto 30px;
 }
 .project .card-body {
-  box-shadow: 5px 5px 8px 0px #eceff4;
   a {
     color: black;
     font-weight: bold;
