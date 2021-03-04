@@ -247,3 +247,20 @@ footer {
     color: black;
   }
 }
+
+@media (min-width: 350px) {
+  #home {
+    padding-top: 25px;
+  }
+  #about {
+    padding-top: 35px;
+  }
+
+  #projects {
+    padding-top: 98px;
+  }
+
+  #contact {
+    padding-top: 45px;
+  }
+}
